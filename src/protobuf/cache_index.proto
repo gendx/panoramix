@@ -1,0 +1,13 @@
+syntax = "proto2";
+package panoramix;
+
+option optimize_for = SPEED;
+
+message CacheIndex {
+    message File {
+        required string name = 1;
+    }
+
+    repeated File files = 1;
+}
+

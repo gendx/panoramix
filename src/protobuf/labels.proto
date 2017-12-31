@@ -1,0 +1,27 @@
+syntax = "proto2";
+package panoramix;
+
+option optimize_for = SPEED;
+
+message Labels {
+
+    // Type of natural object
+    enum Type {
+        UNKNOWN = 0;
+        PEAK = 1;
+        SADDLE = 2;
+        VOLCANO = 3;
+    }
+
+    // Point of interest
+    message Label {
+        required Type type = 1;
+        required double lon = 2;
+        required double lat = 3;
+        optional sint32 ele = 4;
+        required string name = 5;
+    }
+
+    repeated Label labels = 1;
+}
+

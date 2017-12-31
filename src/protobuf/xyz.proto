@@ -1,0 +1,9 @@
+syntax = "proto2";
+package panoramix;
+
+option optimize_for = SPEED;
+
+message XYZ {
+    repeated int32 points = 1 [ packed = true ];
+}
+
