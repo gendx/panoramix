@@ -14,7 +14,7 @@ matrix:
 
 compiler:
     - gcc
-    - clane
+    - clang
 
 before_install:
     - eval "${MATRIX_EVAL}"
@@ -25,7 +25,7 @@ install:
     - qmake -v
 
 before_script:
-    - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download
+    - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download -o asio-1.10.8.tar.gz
     - tar -xvf asio-1.10.8.tar.gz
     - ls -l
 
