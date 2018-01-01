@@ -22,6 +22,7 @@
 #include "quadtree.hpp"
 #include "triangulate.hpp"
 #include <vector>
+#include <memory>
 
 class Delaunay
 {

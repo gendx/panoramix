@@ -23,6 +23,7 @@ install:
     - sudo apt-get install protobuf-compiler libprotobuf-dev
     - sudo apt-get install qt5-qmake qt5-default
     - qmake -v
+    - $CXX -v
 
 before_script:
     - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download -O $HOME/asio-1.10.8.tar.gz
