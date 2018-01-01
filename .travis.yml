@@ -2,7 +2,7 @@ language: cpp
 
 matrix:
   include:
-    - os: linux
+    - compiler: gcc
       addons:
         apt:
           sources:
@@ -11,17 +11,16 @@ matrix:
             - g++-5
       env:
         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
-
-compiler:
-    - gcc
-    - clang
+    - compiler: clang
 
 before_install:
     - eval "${MATRIX_EVAL}"
+    - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
+    - sudo apt-get update
 
 install:
     - sudo apt-get install protobuf-compiler libprotobuf-dev
-    - sudo apt-get install qt5-qmake qt5-default
+    - sudo apt-get install qt55-meta
     - qmake -v
     - $CXX -v
 
