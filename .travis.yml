@@ -1,0 +1,17 @@
+language: cpp
+
+compiler:
+    - gcc
+    - clang
+
+install:
+    - sudo apt-get install libprotobuf-dev
+    - sudo apt-get install qt5-qmake qt5-default
+    - qmake -v
+
+script:
+    - ./setup.sh
+    - cd src
+    - qmake panoramix.pro
+    - make
+
