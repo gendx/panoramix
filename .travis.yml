@@ -1,13 +1,33 @@
 language: cpp
 
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+      env:
+        - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+
 compiler:
     - gcc
-    - clang
+    - clane
+
+before_install:
+    - eval "${MATRIX_EVAL}"
 
 install:
     - sudo apt-get install protobuf-compiler libprotobuf-dev
     - sudo apt-get install qt5-qmake qt5-default
     - qmake -v
+
+before_script:
+    - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download
+    - tar -xvf asio-1.10.8.tar.gz
+    - ls -l
 
 script:
     - ./setup.sh
