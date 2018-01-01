@@ -26,7 +26,7 @@ install:
 
 before_script:
     - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download -O $HOME/asio-1.10.8.tar.gz
-    - tar -xvf $HOME/asio-1.10.8.tar.gz
+    - tar -C $HOME -xvf $HOME/asio-1.10.8.tar.gz
     - pwd
     - ls -l
     - ls -l $HOME
