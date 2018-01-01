@@ -25,10 +25,11 @@ install:
     - qmake -v
 
 before_script:
-    - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download -O asio-1.10.8.tar.gz
-    - tar -xvf asio-1.10.8.tar.gz
+    - wget https://sourceforge.net/projects/asio/files/asio/1.10.8%20%28Stable%29/asio-1.10.8.tar.gz/download -O $HOME/asio-1.10.8.tar.gz
+    - tar -xvf $HOME/asio-1.10.8.tar.gz
     - pwd
     - ls -l
+    - ls -l $HOME
 
 script:
     - ./setup.sh
