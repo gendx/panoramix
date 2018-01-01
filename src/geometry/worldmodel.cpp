@@ -22,6 +22,8 @@
 #include "protobuf/xyz.pb.h"
 #include "config.hpp"
 
+#include <algorithm>
+
 WorldModel::WorldModel(std::shared_ptr<Database> database) :
     mDatabase(database),
     mOrigin(0, 0, 1),
