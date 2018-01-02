@@ -22,6 +22,8 @@
 #include "protobuf/xyz.pb.h"
 #include "config.hpp"
 
+#include <algorithm>
+
 WorldModel::WorldModel(std::shared_ptr<Database> database) :
     mDatabase(database),
     mOrigin(0, 0, 1),
@@ -46,7 +48,7 @@ void WorldModel::loadLatLon(double lat, double lon, int zoom)
         for (auto& tile : tilelist)
         {
             auto self(shared_from_this());
-            TaskManager::manager.launch([this, self, zoom, tile] {
+            TaskManager::manager.launch([this, self, tile] {
                 this->load(tile.zoom, tile.x, tile.y, true);
             });
         }
@@ -293,7 +295,7 @@ void WorldModel::load(int zoom, int x, int y, bool retry)
                 this->load(zoom, x, y, false);
             },
             // onError
-            [this, self, zoom, x, y, xx, yy] {
+            [this, self, zoom, x, y] {
                 this->load(zoom, x, y, false);
             });
             return;

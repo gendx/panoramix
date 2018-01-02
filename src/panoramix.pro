@@ -19,7 +19,7 @@ QT += widgets
 QT += gui
 
 CONFIG += c++14
-QMAKE_CXXFLAGS += --std=c++14
+QMAKE_CXXFLAGS += -std=c++14
 
 QMAKE_CXXFLAGS_RELEASE = -Ofast
 
@@ -34,7 +34,7 @@ TEMPLATE = app
 
 # TODO: you must adapt this to your config
 INCLUDEPATH += . \
-    /path/to/asio-1.10.8/include/
+    /home/travis/asio-1.10.8/include/
 
 DEFINES += ASIO_STANDALONE
 

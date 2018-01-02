@@ -1,6 +1,6 @@
 # Panoramix - 3D view of your surroundings
 
-A proof-of-concept to view interactive panorama of any place on Earth, and show relevant points-of-interest (mountain peaks, etc.).
+A proof-of-concept to view interactive panorama of any place on Earth, and show relevant points-of-interest (mountain peaks, etc.). [![Build Status](https://travis-ci.org/gendx/panoramix.svg?branch=master)](https://travis-ci.org/gendx/panoramix)
 
 ![Screenshot](doc/screenshot.png)
 
