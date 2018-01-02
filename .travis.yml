@@ -1,5 +1,5 @@
 dist: xenial
-sudo: required
+sudo: false
 
 language: cpp
 
@@ -7,9 +7,15 @@ compiler:
     - gcc
     - clang
 
+addons:
+  apt:
+    packages:
+      - protobuf-compiler
+      - libprotobuf-dev
+      - qt5-qmake
+      - qt5-default
+
 install:
-    - sudo apt-get install protobuf-compiler libprotobuf-dev
-    - sudo apt-get install qt5-qmake qt5-default
     - qmake -v
     - $CXX -v
 
@@ -17,14 +23,10 @@ before_script:
     - wget https://github.com/chriskohlhoff/asio/archive/asio-1-10-8.tar.gz -O $HOME/asio-1.10.8.tar.gz
     - tar -C $HOME -xvf $HOME/asio-1.10.8.tar.gz
     - mv $HOME/asio-asio-1-10-8/asio/ $HOME/asio-1.10.8/
-    - pwd
-    - ls -l
-    - ls -l $HOME
 
 script:
     - ./setup.sh
     - cd src
     - qmake panoramix.pro
     - make CC=$CC CXX=$CXX
-    - ls -lR
 
