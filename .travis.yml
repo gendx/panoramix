@@ -1,4 +1,5 @@
 dist: xenial
+sudo: required
 
 language: cpp
 
@@ -36,4 +37,5 @@ script:
     - cd src
     - qmake panoramix.pro
     - make CC=$CC CXX=$CXX
+    - ls -lR
 
