@@ -1,5 +1,5 @@
 dist: xenial
-sudo: false
+sudo: required
 
 language: cpp
 
@@ -7,13 +7,9 @@ compiler:
     - gcc
     - clang
 
-addons:
-  apt:
-    packages:
-      - protobuf-compiler
-      - libprotobuf-dev
-      - qt5-qmake
-      - qt5-default
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install --no-install-recommends protobuf-compiler libprotobuf-dev qt5-qmake qt5-default
 
 install:
     - qmake -v
