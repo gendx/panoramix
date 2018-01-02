@@ -16,6 +16,7 @@ install:
 before_script:
     - wget https://github.com/chriskohlhoff/asio/archive/asio-1-10-8.tar.gz -O $HOME/asio-1.10.8.tar.gz
     - tar -C $HOME -xvf $HOME/asio-1.10.8.tar.gz
+    - mv $HOME/asio-asio-1-10-8/asio/ $HOME/asio-1.10.8/
     - pwd
     - ls -l
     - ls -l $HOME
