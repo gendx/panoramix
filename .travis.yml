@@ -3,21 +3,9 @@ sudo: required
 
 language: cpp
 
-matrix:
-  include:
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
-      env:
-        - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
-    - compiler: clang
-
-before_install:
-    - eval "${MATRIX_EVAL}"
+compiler:
+    - gcc
+    - clang
 
 install:
     - sudo apt-get install protobuf-compiler libprotobuf-dev
