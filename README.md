@@ -1,4 +1,4 @@
-# Panoramix - fast and lightweight 3D view of your surroundings
+# Panoramix - lightweight 3D view of your surroundings
 
 This program shows an interactive 3D panorama of any place on Earth, with relevant points-of-interest (mountain peaks, etc.).
 It is designed to be lightweight and fast, thanks to optimized geometric algorithms implemented in C++.
