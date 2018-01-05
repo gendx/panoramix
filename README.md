@@ -49,8 +49,10 @@ Apart from the terrain data downloaded on the fly with Mapbox API, this project 
 The program expects a file named `labels` in the current directory, that follows the grammar defined in `src/protobuf/labels.proto`.
 Each label contains GPS coordinates, a name and optionally its elevation in *meters* (e.g. for mountain peaks), as well as a type (mountain peak, moutain pass, etc.).
 
-Creating a `labels` file that fits your need is left as an exercise.
+A sample `labels` file containing labels for Switzerland is provided in the `data/` folder (you need to decompress it with e.g. `unxz`).
 The program expects it in the `data/labels` path (relative to the current directory), so you may need to create a `data/` folder in your build directory and move the `labels` file inside it.
+
+Creating a more comprehensive `labels` file that fits your need is left as an exercise.
 
 ### Dependencies
 
