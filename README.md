@@ -1,6 +1,8 @@
-# Panoramix - 3D view of your surroundings
+# Panoramix - fast and lightweight 3D view of your surroundings
 
-A proof-of-concept to view interactive panorama of any place on Earth, and show relevant points-of-interest (mountain peaks, etc.). [![Build Status](https://travis-ci.org/gendx/panoramix.svg?branch=master)](https://travis-ci.org/gendx/panoramix)
+This program shows an interactive 3D panorama of any place on Earth, with relevant points-of-interest (mountain peaks, etc.).
+It is designed to be lightweight and fast, thanks to optimized geometric algorithms implemented in C++.
+[![Build Status](https://travis-ci.org/gendx/panoramix.svg?branch=master)](https://travis-ci.org/gendx/panoramix)
 
 ![Screenshot](doc/screenshot.png)
 
